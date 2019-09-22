@@ -20,6 +20,7 @@ def home():
 <h2>Contribute to the Knowledge of Others</h2>
 <form method="POST">
     <textarea name="content"></textarea>
+    
     <input type="submit" value="Submit">
 </form>
 
@@ -31,7 +32,7 @@ def home():
 <div class="message">
 {}
 </div>
-""".format(m.content)
+""".format(m.content.replace('<', '&lt;').replace('>', '&gt;'))
 
     return body 
 
